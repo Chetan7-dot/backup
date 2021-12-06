@@ -1,0 +1,11 @@
+<h1> Welcome To All Of You </h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.firstname, article %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Add New User", new_article_path %>

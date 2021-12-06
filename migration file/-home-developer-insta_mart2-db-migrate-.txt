@@ -1,0 +1,1 @@
+/home/developer/insta_mart2/db/migrate/20211004112539_remove_type_from_user.rb

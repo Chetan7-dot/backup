@@ -1,0 +1,2 @@
+class Deapartment < ApplicationRecord
+end

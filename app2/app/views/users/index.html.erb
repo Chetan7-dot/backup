@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<center> <h1>Users</h1> </center>
+
+<table border='1' align="center">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="table-success"><%= user.username %></td>
+        <td class="table-success"><%= link_to 'Show', user %></td>
+        <td class="table-success"><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td class="table-success"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<%= link_to 'New User', new_user_path %>

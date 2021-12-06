@@ -1,0 +1,12 @@
+<h1>Hii this is all your details </h1>
+
+<P><strong>Name: </strong><%= @article.firstname %> <%= @article.lastname %></p>
+<p><strong>Email: </strong><%= @article.email %>
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article),
+  method: :delete,
+  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<%= link_to "Back", articles_path %>

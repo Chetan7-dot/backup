@@ -1,0 +1,15 @@
+<%= form_with model: @customer do |form| %>
+  
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %><br>
+    <% @customer.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div><br>
+  
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

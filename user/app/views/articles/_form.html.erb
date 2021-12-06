@@ -1,0 +1,31 @@
+<%= form_with model: @article do |form| %>
+  <div>
+      <%= form.label :firstname %> <br>
+      <%= form.text_field :firstname %>
+      <% @article.errors.full_messages_for(:firstname).each do |msg| %>
+        <div><%= msg %></div>
+        <% end %>
+  </div>
+
+  <div>
+      <%= form.label :lastname %><br>
+      <%= form.text_field :lastname %>
+ 
+      <% @article.errors.full_messages_for(:lastname).each do |msg| %>
+        <div><%= msg %></div>
+        <% end %> 
+  </div>
+  
+  <div>
+      <%=form.label :email %> <br>
+      <%= form.text_field :email %>
+      <% @article.errors.full_messages_for(:email).each do |msg| %>
+        <div><%= msg %></div>
+        <% end %>
+  </div>
+  
+  <div>
+  <%= form.submit %>
+  </div>
+<% end %>
+<%= link_to "Back", articles_path %>
